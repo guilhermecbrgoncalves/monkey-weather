@@ -31,6 +31,14 @@ main a:hover {
     text-decoration: underline;
 }
 
+.overlay {
+    background-color: rgba(0, 0, 0, 0.534);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+
 #overlay1 {
     background-color: rgba(0, 0, 0, 0.342);
     display: none;
@@ -123,7 +131,6 @@ footer h3:hover {
 }
 
 .sidenav {
-    background-color: rgb(255, 180, 68);;
     width: 14rem !important;
     height: 100vh;
     position: fixed;
@@ -137,3 +144,32 @@ footer h3:hover {
 main .content > h1 {
     color: darkgrey;
 }
+
+.whatToDo h2 {
+    color: grey;
+}
+
+.whatToDo h3 {
+    color: grey;
+}
+
+.whatToDo h5 {
+    color: grey;
+    font-weight: 200;
+}
+
+.whatToDo h5:hover {
+    color: black;
+}
+
+.navDropdown {
+    color: white;
+    text-align: center;
+}
+
+.navDropdown:hover {
+    background-color: blanchedalmond;
+    color: black;
+}
+
+

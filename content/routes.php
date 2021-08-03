@@ -10,9 +10,21 @@ if (isset($_GET['p'])) {
         include('content/pages/register.php');
         echo "<script>document.title = 'Register';</script>";
     }
-    else if ($pag == 'index') { 
-        include('content/pages/dashboard/dashboard-index.php');
-        echo "<script>document.title = 'Dashboard';</script>";
+    else if ($pag == 'home') { 
+        include('content/pages/dashboard/home.php');
+        echo "<script>document.title = 'Home';</script>";
+    }
+    else if ($pag == 'my-places') { 
+        include('content/pages/dashboard/my-places.php');
+        echo "<script>document.title = 'My Places';</script>";
+    }
+    else if ($pag == 'my-airports') { 
+        include('content/pages/dashboard/my-airports.php');
+        echo "<script>document.title = 'My Airports';</script>";
+    }
+    else if ($pag == 'profile') { 
+        include('content/pages/dashboard/profile.php');
+        echo "<script>document.title = 'Profile';</script>";
     }
     else if ($pag == 'about') { 
         include('content/pages/about.php');

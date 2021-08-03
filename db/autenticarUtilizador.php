@@ -15,9 +15,11 @@ if ($result->num_rows == 1) {
   session_start();
   $_SESSION['id'] = $row['id_utilizador'];
   $_SESSION['user'] = $row['username'];
-  //die('aaa');
+  $_SESSION['name'] = $row['name'];
+  $_SESSION['image'] = $row['image'];
+  //die($_SESSION['image']);
 
-  header('Location: ../dashboard.php?p=index');
+  header('Location: ../dashboard.php?p=home');
 
 } else {
   echo "Login inválido: " . $sql . "<br>" . $conn->error;

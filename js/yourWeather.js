@@ -8,16 +8,12 @@ for (var i = 0; i < data["data"].length; i++) {
     let local = data["data"][i]["local"]
 
     var node_option = document.createElement("option");                 // Create a <li> node
-    node_option.setAttribute("name", "form-local");
+    node_option.setAttribute("name", "local");
     node_option.setAttribute("value", data["data"][i]["globalIdLocal"]);
     var textnode = document.createTextNode(local);         // Create a text node
 
     //node_a.appendChild(textnode);                              // Append the text to <li>
     node_option.appendChild(textnode);                              // Append the text to <li>
     document.getElementById("selectLocal").appendChild(node_option);
-
-
-
-    
 }
 
