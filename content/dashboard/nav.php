@@ -10,7 +10,6 @@ if (!isset($_SESSION['id'])) {
 }
 
 ?>
-
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top mb-5" style="background-color:blanchedalmond;">

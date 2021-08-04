@@ -11,7 +11,7 @@
             <input type="text" class="form-control" name="id" required id="id" value="<?= $userId ?>" hidden>
             <div class="form-group" style="width: 100%;">
                 <label for="exampleFormControlSelect2">Area Select</label>
-                <select multiple class="form-control" id="selectLocal" name="form-local" style="height: 500px;">
+                <select multiple class="form-control" id="selectLocal" name="form-local" style="height: 350px;">
                 </select>
             </div>
             <button class="btn btn-primary mt-3" type="submit">Submit</button>

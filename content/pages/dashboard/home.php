@@ -3,14 +3,13 @@
       <!-- Page Heading -->
       <div class="container mt-5">
           <div class="row pt-5 pb-5">
-              <div class="col-sm pr-5">
-
-                  <h2 style="font-size: 60px">Welcome
+              <div class="col-sm pr-5 welcome">
+                  <h1>Welcome
                       <a href="dashboard.php?p=profile">
                           <?= $name ?></a>
-                  </h2>
+                  </h1>
               </div>
-              <div class="col-sm pl-5">
+              <div class="col-sm pl-5 text-center">
                   <img class="img-profile rounded-circle" style="width: 250px; height:250px; object-fit:cover" src="img/profile-img/<?php echo $image?>">
               </div>
           </div>
@@ -27,11 +26,20 @@
 
               <div class="col-sm pt-2">
                   <h3>the flying monkey</h3>
-                  <a href="https://pedrolimamusic.com/admin/users">
-                      <h5>Manage Users</h5>
+                  <a href="dashboard.php?p=weather-map">
+                      <h5>check weather map</h5>
                   </a>
                   <a href="/register">
-                      <h5>Register New User</h5>
+                      <h5>my airports</h5>
+                  </a>
+                  <a href="/register">
+                      <h5>TAF & METAR</h5>
+                  </a>
+                  <a href="dashboard.php?p=notams">
+                      <h5>NOTAMS</h5>
+                  </a>
+                  <a href="/register">
+                      <h5>significant weather charts</h5>
                   </a>
               </div>
 

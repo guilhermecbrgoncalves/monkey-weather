@@ -31,13 +31,12 @@ main a:hover {
     text-decoration: underline;
 }
 
-.overlay {
+.overlayPlaces {
     background-color: rgba(0, 0, 0, 0.534);
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
 }
-
 
 #overlay1 {
     background-color: rgba(0, 0, 0, 0.342);
@@ -142,19 +141,19 @@ footer h3:hover {
 }
 
 main .content > h1 {
-    color: darkgrey;
+    color: rgba(0,0,0,.55);
 }
 
 .whatToDo h2 {
-    color: grey;
+    color: rgba(0,0,0,.55);
 }
 
 .whatToDo h3 {
-    color: grey;
+    color: rgba(0,0,0,.55);
 }
 
 .whatToDo h5 {
-    color: grey;
+    color: rgba(0,0,0,.55);
     font-weight: 200;
 }
 
@@ -170,6 +169,21 @@ main .content > h1 {
 .navDropdown:hover {
     background-color: blanchedalmond;
     color: black;
+}
+
+.welcome h1 {
+    color: rgba(0,0,0,.55);
+    font-size: 60px;
+    text-align: left;
+}
+
+.welcome a {
+    color: rgb(255, 180, 68);
+}
+
+.welcome a:hover {
+    color: rgb(255, 180, 68);
+    text-decoration: underline;
 }
 
 

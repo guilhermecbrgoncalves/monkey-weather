@@ -22,6 +22,14 @@ if (isset($_GET['p'])) {
         include('content/pages/dashboard/my-airports.php');
         echo "<script>document.title = 'My Airports';</script>";
     }
+    else if ($pag == 'weather-map') { 
+        include('content/pages/dashboard/weather-map.php');
+        echo "<script>document.title = 'Weather Map';</script>";
+    }
+    else if ($pag == 'notams') { 
+        include('content/pages/dashboard/notams.php');
+        echo "<script>document.title = 'Notams';</script>";
+    }
     else if ($pag == 'profile') { 
         include('content/pages/dashboard/profile.php');
         echo "<script>document.title = 'Profile';</script>";
