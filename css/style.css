@@ -38,6 +38,25 @@ main a:hover {
     border-radius: 10px;
 }
 
+.overlayPlacesTp {
+    background-color: rgba(0, 0, 0, 0.534);
+    -webkit-border-radius: 10px 10px 0px 0px;
+    -moz-border-radius: 10px 10px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.overlayPlacesBt {
+    background-color: rgba(0, 0, 0, 0.534);
+    -webkit-border-radius: 0px 0px 10px 10px;
+    -moz-border-radius: 0px 0px 10px 10px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.overlayPlaces p, hr, h3 {
+    color: white;
+}
+
+
 #overlay1 {
     background-color: rgba(0, 0, 0, 0.342);
     display: none;
@@ -130,14 +149,13 @@ footer h3:hover {
 }
 
 .sidenav {
-    width: 14rem !important;
+    width: 14rem;
     height: 100vh;
     position: fixed;
-
 }
 
 .content {
-    margin-left: 14rem !important;
+    margin-left: 14rem;
 }
 
 main .content > h1 {
@@ -184,6 +202,32 @@ main .content > h1 {
 .welcome a:hover {
     color: rgb(255, 180, 68);
     text-decoration: underline;
+}
+
+.btnRemovePlace {
+    margin-left: 85%;
+}
+
+@media only screen and (max-width: 600px) {
+
+    h1 {
+        font-size: 56px;
+    }
+
+    .sidenav {
+        width: 90%;
+        position: unset;
+        height: unset;
+        margin-bottom: 50px;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .btnRemovePlace {
+        margin-left: 60%;
+    }
 }
 
 
