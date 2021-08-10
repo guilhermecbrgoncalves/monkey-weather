@@ -1,11 +1,6 @@
 <?php
-
-include('content/head.php');
-include('content/dashboard/nav.php');
-//include('content/dashboard/sidenav.php');
-
-include('content/routes.php');
-
-include('content/footer.php');
-
+include('content/components/head.php');
+include('content/components/dashboard/nav.php');
+include('content/components/dashboard/routes.php');
+include('content/components/footer.php');
 ?>

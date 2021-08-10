@@ -1,108 +1,104 @@
-
+//SELECT OPTIONS
 var obj = ' { "data": [{"idRegiao": 1, "idAreaAviso": "AVR", "idConcelho": 5, "globalIdLocal": 1010500, "latitude": "40.6413", "idDistrito": 1, "local": "Aveiro", "longitude": "-8.6535"},     {"idRegiao": 1, "idAreaAviso": "BJA", "idConcelho": 5, "globalIdLocal": 1020500, "latitude": "38.0200", "idDistrito": 2, "local": "Beja", "longitude": "-7.8700"},     {"idRegiao": 1, "idAreaAviso": "BRG", "idConcelho": 3, "globalIdLocal": 1030300, "latitude": "41.5475", "idDistrito": 3, "local": "Braga", "longitude": "-8.4227"},      {"idRegiao": 1, "idAreaAviso": "BGC", "idConcelho": 2, "globalIdLocal": 1040200, "latitude": "41.8076", "idDistrito": 4, "local": "Bragan\u00e7a", "longitude": "-6.7606"},    {"idRegiao": 1, "idAreaAviso": "CBO", "idConcelho": 2, "globalIdLocal": 1050200, "latitude": "39.8217", "idDistrito": 5, "local": "Castelo Branco", "longitude": "-7.4957"},      {"idRegiao": 1, "idAreaAviso": "CBR", "idConcelho": 3, "globalIdLocal": 1060300, "latitude": "40.2081", "idDistrito": 6, "local": "Coimbra", "longitude": "-8.4194"},     {"idRegiao": 1, "idAreaAviso": "EVR", "idConcelho": 5, "globalIdLocal": 1070500, "latitude": "38.5701", "idDistrito": 7, "local": "\u00c9vora", "longitude": "-7.9104"},  {    "idRegiao": 1, "idAreaAviso": "FAR", "idConcelho": 5, "globalIdLocal": 1080500, "latitude": "37.0146", "idDistrito": 8, "local": "Faro", "longitude": "-7.9331"}, {    "idRegiao": 1, "idAreaAviso": "GDA", "idConcelho": 7, "globalIdLocal": 1090700, "latitude": "40.5379", "idDistrito": 9, "local": "Guarda", "longitude": "-7.2647"},     {"idRegiao": 1, "idAreaAviso": "LRA", "idConcelho": 9, "globalIdLocal": 1100900, "latitude": "39.7473", "idDistrito": 10, "local": "Leiria", "longitude": "-8.8069"},      {"idRegiao": 1, "idAreaAviso": "LSB", "idConcelho": 6, "globalIdLocal": 1110600, "latitude": "38.7660", "idDistrito": 11, "local": "Lisboa", "longitude": "-9.1286"},     {"idRegiao": 1, "idAreaAviso": "PTG", "idConcelho": 14, "globalIdLocal": 1121400, "latitude": "39.2900", "idDistrito": 12, "local": "Portalegre", "longitude": "-7.4200"},      {"idRegiao": 1, "idAreaAviso": "PTO", "idConcelho": 12, "globalIdLocal": 1131200, "latitude": "41.1580", "idDistrito": 13, "local": "Porto", "longitude": "-8.6294"},      {"idRegiao": 1, "idAreaAviso": "STM", "idConcelho": 16, "globalIdLocal": 1141600, "latitude": "39.2000", "idDistrito": 14, "local": "Santar\u00e9m", "longitude": "-8.7400"},     {"idRegiao": 1, "idAreaAviso": "STB", "idConcelho": 12, "globalIdLocal": 1151200, "latitude": "38.5246", "idDistrito": 15, "local": "Set\u00fabal", "longitude": "-8.8856"},             {"idRegiao": 1, "idAreaAviso": "VCT", "idConcelho": 9, "globalIdLocal": 1160900, "latitude": "41.6952", "idDistrito": 16, "local": "Viana do Castelo", "longitude": "-8.8365"},             {"idRegiao": 1, "idAreaAviso": "VRL", "idConcelho": 14, "globalIdLocal": 1171400, "latitude": "41.3053", "idDistrito": 17, "local": "Vila Real", "longitude": "-7.7440"},             {"idRegiao": 1, "idAreaAviso": "VIS", "idConcelho": 23, "globalIdLocal": 1182300, "latitude": "40.6585", "idDistrito": 18, "local": "Viseu", "longitude": "-7.9120"},              {"idRegiao": 2, "idAreaAviso": "MCS", "idConcelho": 3, "globalIdLocal": 2310300, "latitude": "32.6485", "idDistrito": 31, "local": "Funchal", "longitude": "-16.9084"},             {"idRegiao": 2, "idAreaAviso": "MPS", "idConcelho": 1, "globalIdLocal": 2320100, "latitude": "33.0700", "idDistrito": 32, "local": "Porto Santo", "longitude": "-16.3400"},             {"idRegiao": 3, "idAreaAviso": "AOR", "idConcelho": 1, "globalIdLocal": 3410100, "latitude": "36.9563", "idDistrito": 41, "local": "Vila do Porto", "longitude": "-25.1409"},             {"idRegiao": 3, "idAreaAviso": "AOR", "idConcelho": 3, "globalIdLocal": 3420300, "latitude": "37.7415", "idDistrito": 42, "local": "Ponta Delgada", "longitude": "-25.6677"},             {"idRegiao": 3, "idAreaAviso": "ACE", "idConcelho": 1, "globalIdLocal": 3430100, "latitude": "38.6700", "idDistrito": 43, "local": "Angra do Hero\u00edsmo", "longitude": "-27.2200"},            {"idRegiao": 3, "idAreaAviso": "ACE", "idConcelho": 1, "globalIdLocal": 3440100, "latitude": "39.0800", "idDistrito": 44, "local": "Santa Cruz da Graciosa", "longitude": "-28.0000"},             {"idRegiao": 3, "idAreaAviso": "ACE", "idConcelho": 2, "globalIdLocal": 3450200, "latitude": "38.6842", "idDistrito": 45, "local": "Velas", "longitude": "-28.2133"},             {"idRegiao": 3, "idAreaAviso": "ACE", "idConcelho": 2, "globalIdLocal": 3460200, "latitude": "38.5325", "idDistrito": 46, "local": "Madalena", "longitude": "-28.5237"},             {"idRegiao": 3, "idAreaAviso": "ACE", "idConcelho": 1, "globalIdLocal": 3470100, "latitude": "38.5363", "idDistrito": 47, "local": "Horta", "longitude": "-28.6315"},             {"idRegiao": 3, "idAreaAviso": "AOC", "idConcelho": 2, "globalIdLocal": 3480200, "latitude": "39.4500", "idDistrito": 48, "local": "Santa Cruz das Flores", "longitude": "-31.1300"},             {"idRegiao": 3, "idAreaAviso": "AOC", "idConcelho": 1, "globalIdLocal": 3490100, "latitude": "39.6700", "idDistrito": 49, "local": "Vila do Corvo", "longitude": "-31.1200"  } ] }';
 
 var data = JSON.parse(obj)
 for (var i = 0; i < data["data"].length; i++) {
 
-    //console.log(data["data"][i]["globalIdLocal"])
     let local = data["data"][i]["local"]
-
     var node_option = document.createElement("option");                 // Create a <li> node
     node_option.setAttribute("name", "local");
     node_option.setAttribute("value", data["data"][i]["globalIdLocal"]);
-    var textnode = document.createTextNode(local);         // Create a text node
-
-    //node_a.appendChild(textnode);                              // Append the text to <li>
-    node_option.appendChild(textnode);                              // Append the text to <li>
+    var textnode = document.createTextNode(local);         // Create a text node                  
+    node_option.appendChild(textnode);
     document.getElementById("selectLocal").appendChild(node_option);
 }
 
 function whatWeather(weatherId) {
     switch (weatherId) {
         case 0:
-            return "Sem Informação";
+            return "No information";
             break;
         case 1:
-            return "Céu limpo";
+            return "Clear Skies";
             break;
         case 2:
-            return "Céu pouco nublado";
+            return "Partly Cloudly";
             break;
         case 3:
-            return "Céu parcialmente nublado";
+            return "Few Clouds";
             break;
         case 4:
-            return "Céu muito nublado ou encoberto";
+            return "Covered with Clouds";
             break;
         case 5:
-            
-            return "Céu nublado por nuvens altas";
+
+            return "High Clouds and Covered";
             break;
         case 6:
-            return "Aguaceiros";
+            return "Downpours";
             break;
         case 7:
-            return "Aguaceiros fracos";
+            return "Weak Downpours";
             break;
         case 8:
-            return "Aguaceiros fortes";
+            return "Strong Downpours";
             break;
         case 9:
-            return "Chuva";
+            return "Rain";
             break;
         case 10:
-            return "Chuva fraca ou chuvisco";
+            return "Weak Rain or Drizzle";
             break;
         case 11:
-            return "Chuva forte";
+            return "Strong Rain";
             break;
         case 12:
-            return "Períodos de chuva";
+            return "Periods of Rain";
             break;
         case 13:
-            return "Períodos de chuva fraca";
+            return "Periods of Weak Rain";
             break;
         case 14:
-            return "Períodos de chuva forte";
+            return "Periods of Strong Rain";
             break;
         case 15:
-            return "Chuvisco";
+            return "Drizzle";
             break;
         case 16:
-            return "Neblina";
+            return "Fog";
             break;
         case 17:
-            return "Nevoeiro ou nuvens baixas";
+            return "Fog or Low Clouds";
             break;
         case 18:
-            return "Neve";
+            return "Snow";
             break;
         case 19:
-            return "Trovoada";
+            return "Thunderstorms";
             break;
         case 20:
-            return "Aguaceiros e trovoada";
+            return "Showers and Thunderstorms";
             break;
         case 21:
-            return "Granizo";
+            return "Hail";
             break;
         case 22:
-            return "Geada";
+            return "Frost";
             break;
         case 23:
-            return "Chuva e trovoada";
+            return "Rain and Thunderstorm";
             break;
         case 24:
-            return "Nebulosidade convectiva";
+            return "Convective Cloudiness";
             break;
         case 25:
-            return "Céu com Períodos de muito nublado";
+            return "Sky with Cloudy Periods";
             break;
         case 26:
-            return "Nevoeiro";
+            return "Fog";
             break;
         case 27:
-            return "Céu nublado";
+            return "Cloudy Sky";
             break;
     }
 }
@@ -129,7 +125,7 @@ function whatWeatherImages(weatherId, image) {
             image.src = "img/weatherIcons/cloudy.svg";
             image.alt = "Covered with Clouds"
             break;
-        case 5: 
+        case 5:
             image.src = "img/weatherIcons/cloudy-day-3.svg";
             image.alt = "High Clouds and Covered"
             break;
@@ -161,7 +157,6 @@ function whatWeatherImages(weatherId, image) {
         case 12:
             image.src = "img/weatherIcons/rainy-1.svg";
             image.alt = "Periods of Rain"
-
             break;
         case 13:
             image.src = "img/weatherIcons/rainy-2.svg";
@@ -226,22 +221,22 @@ function whatWeatherImages(weatherId, image) {
     }
 }
 
-function whatWind(windId){
+function whatWind(windId) {
     switch (windId) {
         case 0:
-            return "Sem Informação";
+            return "No information";
             break;
         case 1:
-            return "Fraco";
+            return "Weak";
             break;
         case 2:
-            return "Moderado";
+            return "Moderate";
             break;
         case 3:
-            return "Forte";
+            return "Strong";
             break;
         case 4:
-            return "Muito forte";
+            return "Very Strong";
             break;
     }
 }
@@ -259,6 +254,7 @@ function weatherCards(arr, numRows) {
 
                 var myArr = JSON.parse(this.responseText);
 
+                //METEO HOJE
                 const tMaxHoje = (myArr["data"][0])["tMax"];
                 const tMinimaHoje = (myArr["data"][0])["tMin"];
                 const probChuvaHoje = (myArr["data"][0])["precipitaProb"];
@@ -266,15 +262,17 @@ function weatherCards(arr, numRows) {
                 const ventoHoje = (myArr["data"][0])["classWindSpeed"];
                 const weatherIdHoje = (myArr["data"][0])["idWeatherType"];
 
+                let imageHoje = document.getElementById("tempImgHoje_" + idLocal);
+                whatWeatherImages(weatherIdHoje, imageHoje);
 
                 document.getElementById("tempMaxHoje_" + idLocal).textContent = tMaxHoje + "ºC  ";
                 document.getElementById("tempMinHoje_" + idLocal).textContent = tMinimaHoje + "ºC";
-
                 document.getElementById("weatherType_" + idLocal).textContent = whatWeather(weatherIdHoje);
                 document.getElementById("intVentoHoje_" + idLocal).textContent = "Wind intensity: " + whatWind(ventoHoje);
                 document.getElementById("directVentoHoje_" + idLocal).textContent = "Wind direction: " + direcVentoHoje + "º";
                 document.getElementById("chuvaHoje_" + idLocal).textContent = "Precipitation: " + probChuvaHoje + "%";
 
+                //METEO DIAS SEGUINTES
                 const tMaxAmanha1 = (myArr["data"][1])["tMax"];
                 const tMinimaAmanha1 = (myArr["data"][1])["tMin"];
                 const weatherIdAmanha1 = (myArr["data"][1])["idWeatherType"];
@@ -291,11 +289,13 @@ function weatherCards(arr, numRows) {
                 const tMinimaAmanha4 = (myArr["data"][4])["tMin"];
                 const weatherIdAmanha4 = (myArr["data"][4])["idWeatherType"];
 
+                //METEO ICONS
                 let imageAmanha1 = document.getElementById("tempImgAmanha1_" + idLocal);
                 let imageAmanha2 = document.getElementById("tempImgAmanha2_" + idLocal);
                 let imageAmanha3 = document.getElementById("tempImgAmanha3_" + idLocal);
                 let imageAmanha4 = document.getElementById("tempImgAmanha4_" + idLocal);
 
+                //ADICIONAR ICONS E ESPECS DE METEO
                 document.getElementById("tempMaxAmanha1_" + idLocal).textContent = tMaxAmanha1 + "ºC - " + tMinimaAmanha1 + "ºC";
                 whatWeatherImages(weatherIdAmanha1, imageAmanha1);
                 document.getElementById("tempMaxAmanha2_" + idLocal).textContent = tMaxAmanha2 + "ºC - " + tMinimaAmanha2 + "ºC";
@@ -304,15 +304,12 @@ function weatherCards(arr, numRows) {
                 whatWeatherImages(weatherIdAmanha3, imageAmanha3);
                 document.getElementById("tempMaxAmanha4_" + idLocal).textContent = tMaxAmanha4 + "ºC - " + tMinimaAmanha4 + "ºC";
                 whatWeatherImages(weatherIdAmanha4, imageAmanha4);
-
             }
-
         }
 
         xmlhttp.open("GET", url, true);
 
         xmlhttp.send();
-
 
         var obj = ' { "data": [{"idRegiao": 1, "idAreaAviso": "AVR", "idConcelho": 5, "globalIdLocal": 1010500, "latitude": "40.6413", "idDistrito": 1, "local": "Aveiro", "longitude": "-8.6535"},     {"idRegiao": 1, "idAreaAviso": "BJA", "idConcelho": 5, "globalIdLocal": 1020500, "latitude": "38.0200", "idDistrito": 2, "local": "Beja", "longitude": "-7.8700"},     {"idRegiao": 1, "idAreaAviso": "BRG", "idConcelho": 3, "globalIdLocal": 1030300, "latitude": "41.5475", "idDistrito": 3, "local": "Braga", "longitude": "-8.4227"},      {"idRegiao": 1, "idAreaAviso": "BGC", "idConcelho": 2, "globalIdLocal": 1040200, "latitude": "41.8076", "idDistrito": 4, "local": "Bragan\u00e7a", "longitude": "-6.7606"},    {"idRegiao": 1, "idAreaAviso": "CBO", "idConcelho": 2, "globalIdLocal": 1050200, "latitude": "39.8217", "idDistrito": 5, "local": "Castelo Branco", "longitude": "-7.4957"},      {"idRegiao": 1, "idAreaAviso": "CBR", "idConcelho": 3, "globalIdLocal": 1060300, "latitude": "40.2081", "idDistrito": 6, "local": "Coimbra", "longitude": "-8.4194"},     {"idRegiao": 1, "idAreaAviso": "EVR", "idConcelho": 5, "globalIdLocal": 1070500, "latitude": "38.5701", "idDistrito": 7, "local": "\u00c9vora", "longitude": "-7.9104"},  {    "idRegiao": 1, "idAreaAviso": "FAR", "idConcelho": 5, "globalIdLocal": 1080500, "latitude": "37.0146", "idDistrito": 8, "local": "Faro", "longitude": "-7.9331"}, {    "idRegiao": 1, "idAreaAviso": "GDA", "idConcelho": 7, "globalIdLocal": 1090700, "latitude": "40.5379", "idDistrito": 9, "local": "Guarda", "longitude": "-7.2647"},     {"idRegiao": 1, "idAreaAviso": "LRA", "idConcelho": 9, "globalIdLocal": 1100900, "latitude": "39.7473", "idDistrito": 10, "local": "Leiria", "longitude": "-8.8069"},      {"idRegiao": 1, "idAreaAviso": "LSB", "idConcelho": 6, "globalIdLocal": 1110600, "latitude": "38.7660", "idDistrito": 11, "local": "Lisboa", "longitude": "-9.1286"},     {"idRegiao": 1, "idAreaAviso": "PTG", "idConcelho": 14, "globalIdLocal": 1121400, "latitude": "39.2900", "idDistrito": 12, "local": "Portalegre", "longitude": "-7.4200"},      {"idRegiao": 1, "idAreaAviso": "PTO", "idConcelho": 12, "globalIdLocal": 1131200, "latitude": "41.1580", "idDistrito": 13, "local": "Porto", "longitude": "-8.6294"},      {"idRegiao": 1, "idAreaAviso": "STM", "idConcelho": 16, "globalIdLocal": 1141600, "latitude": "39.2000", "idDistrito": 14, "local": "Santar\u00e9m", "longitude": "-8.7400"},     {"idRegiao": 1, "idAreaAviso": "STB", "idConcelho": 12, "globalIdLocal": 1151200, "latitude": "38.5246", "idDistrito": 15, "local": "Set\u00fabal", "longitude": "-8.8856"},             {"idRegiao": 1, "idAreaAviso": "VCT", "idConcelho": 9, "globalIdLocal": 1160900, "latitude": "41.6952", "idDistrito": 16, "local": "Viana do Castelo", "longitude": "-8.8365"},             {"idRegiao": 1, "idAreaAviso": "VRL", "idConcelho": 14, "globalIdLocal": 1171400, "latitude": "41.3053", "idDistrito": 17, "local": "Vila Real", "longitude": "-7.7440"},             {"idRegiao": 1, "idAreaAviso": "VIS", "idConcelho": 23, "globalIdLocal": 1182300, "latitude": "40.6585", "idDistrito": 18, "local": "Viseu", "longitude": "-7.9120"},              {"idRegiao": 2, "idAreaAviso": "MCS", "idConcelho": 3, "globalIdLocal": 2310300, "latitude": "32.6485", "idDistrito": 31, "local": "Funchal", "longitude": "-16.9084"},             {"idRegiao": 2, "idAreaAviso": "MPS", "idConcelho": 1, "globalIdLocal": 2320100, "latitude": "33.0700", "idDistrito": 32, "local": "Porto Santo", "longitude": "-16.3400"},             {"idRegiao": 3, "idAreaAviso": "AOR", "idConcelho": 1, "globalIdLocal": 3410100, "latitude": "36.9563", "idDistrito": 41, "local": "Vila do Porto", "longitude": "-25.1409"},             {"idRegiao": 3, "idAreaAviso": "AOR", "idConcelho": 3, "globalIdLocal": 3420300, "latitude": "37.7415", "idDistrito": 42, "local": "Ponta Delgada", "longitude": "-25.6677"},             {"idRegiao": 3, "idAreaAviso": "ACE", "idConcelho": 1, "globalIdLocal": 3430100, "latitude": "38.6700", "idDistrito": 43, "local": "Angra do Hero\u00edsmo", "longitude": "-27.2200"},            {"idRegiao": 3, "idAreaAviso": "ACE", "idConcelho": 1, "globalIdLocal": 3440100, "latitude": "39.0800", "idDistrito": 44, "local": "Santa Cruz da Graciosa", "longitude": "-28.0000"},             {"idRegiao": 3, "idAreaAviso": "ACE", "idConcelho": 2, "globalIdLocal": 3450200, "latitude": "38.6842", "idDistrito": 45, "local": "Velas", "longitude": "-28.2133"},             {"idRegiao": 3, "idAreaAviso": "ACE", "idConcelho": 2, "globalIdLocal": 3460200, "latitude": "38.5325", "idDistrito": 46, "local": "Madalena", "longitude": "-28.5237"},             {"idRegiao": 3, "idAreaAviso": "ACE", "idConcelho": 1, "globalIdLocal": 3470100, "latitude": "38.5363", "idDistrito": 47, "local": "Horta", "longitude": "-28.6315"},             {"idRegiao": 3, "idAreaAviso": "AOC", "idConcelho": 2, "globalIdLocal": 3480200, "latitude": "39.4500", "idDistrito": 48, "local": "Santa Cruz das Flores", "longitude": "-31.1300"},             {"idRegiao": 3, "idAreaAviso": "AOC", "idConcelho": 1, "globalIdLocal": 3490100, "latitude": "39.6700", "idDistrito": 49, "local": "Vila do Corvo", "longitude": "-31.1200"  } ] }';
 
@@ -322,13 +319,20 @@ function weatherCards(arr, numRows) {
 
             if (data["data"][j]["globalIdLocal"] == arr[i]) {
                 console.log(data["data"][j]["local"])
-
+                //ADICIONA NOME DE LOCAL
                 document.getElementById("local_" + arr[i]).textContent = data["data"][j]["local"];
 
-                document.getElementById('bgLocal_' + arr[i]).style.backgroundImage = "url('img/locais/" + data["data"][j]["local"] + "1.jpg')";
+                //RANDOM DE IMAGENS
+                let rnd = (Math.random() * (3 - 1) + 1).toFixed(0);
+                console.log("rnd is: " + rnd);
+                if (rnd == 1) {
+                    document.getElementById('bgLocal_' + arr[i]).style.backgroundImage = "url('img/locais/" + data["data"][j]["local"] + "1.jpg')";
+                } else if (rnd == 2) {
+                    document.getElementById('bgLocal_' + arr[i]).style.backgroundImage = "url('img/locais/" + data["data"][j]["local"] + "2.jpg')";
 
-                /*var image2 = document.getElementById('image2_' + arr[i]);
-                image2.src = "img/locais/" + data["data"][j]["local"] + "2.jpg";*/
+                } else {
+                    document.getElementById('bgLocal_' + arr[i]).style.backgroundImage = "url('img/locais/" + data["data"][j]["local"] + "3.jpg')";
+                }
             }
         }
     }
