@@ -10,9 +10,9 @@ $sql = "INSERT INTO utilizador (username, password, email, name)
 VALUES ('$user', '$pwd', '$email', '$name')";
 
 if ($conn->query($sql) === TRUE) {
-  header('refresh: 2; url= ../index.php?p=login&e=success');
+  header('Location: ../index.php?p=login&e=success');
 } else {
-  header('refresh: 2; url= ../index.php?p=login&e=error');
+  header('Location: ../index.php?p=login&e=error');
 }
 
 

@@ -44,9 +44,9 @@ if ($uploadOk == 1) {
 }
 
 if ($conn->query($sql) === TRUE) {
-  header('refresh: 2; url= ../dashboard.php?p=profile&response=edited');
+  header('Location: ../dashboard.php?p=profile&response=edited');
 } else {
-  header('refresh: 2; url= ../dashboard.php?p=profile&response=error');
+  header('Location: ../dashboard.php?p=profile&response=error');
 }
 
 $conn->close();

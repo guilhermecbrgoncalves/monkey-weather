@@ -7,9 +7,9 @@ $local = $_POST['delete-local'];
 $sql = "DELETE FROM locals WHERE name=$local";
 
 if ($conn->query($sql) === TRUE) {
-  header('refresh: 2; url= ../dashboard.php?p=my-places&response=deleted');
+  header('Location: ../dashboard.php?p=my-places&response=deleted');
 } else {
-  header('refresh: 2; url= ../dashboard.php?p=my-places&response=errorDelete');
+  header('Location: ../dashboard.php?p=my-places&response=errorDelete');
 }
 
 $conn->close();

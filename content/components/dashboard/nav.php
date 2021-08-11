@@ -36,7 +36,11 @@ if (!isset($_SESSION['id'])) {
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item navDropdown" data-bs-toggle="modal" data-bs-target="#logoutModal" href="#">logout</a></li>
+                                <li>
+                                    <form action="db/logout.php">
+                                    <button class="dropdown-item navDropdown" type="submit" data-bs-toggle="modal" data-bs-target="#logoutModal">logout</button>
+                                    </form>
+                                </li>
                             </ul>
                         </li>
                     </ul>

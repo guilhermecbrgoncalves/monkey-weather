@@ -7,9 +7,9 @@ $id = $_POST['form-id'];
 $sql = "DELETE FROM utilizador WHERE id_utilizador=$id";
 
 if ($conn->query($sql) === TRUE) {
-  header('refresh: 2; url= ../index.php?p=home&e=userDeleted');
+  header('Location: ../index.php?p=home&e=userDeleted');
 } else {
-  header('refresh: 2; url= ../dashboard.php?p=profile&e=errorDeleting');
+  header('Location: ../dashboard.php?p=profile&e=errorDeleting');
 }
 $conn->close();
 ?>
