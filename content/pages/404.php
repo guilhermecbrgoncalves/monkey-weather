@@ -1,6 +1,6 @@
 <!--PAGE NOT FOUND-->
 <div class="container-fluid" style="background-image: url('img/macaco7.jfif'); height: 100vh; background-size: cover;">
-    <div class="row pt-5 mt-5">
+    <div class="row pt-5">
         <div class="col-6">
         </div>
         <div class="col-6 mt-5 main">
@@ -16,4 +16,4 @@
         </div>
     </div>
 </div>
-<!--SERVICE END-->
+<!--PAGE NOT FOUND END-->

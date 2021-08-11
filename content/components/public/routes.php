@@ -12,7 +12,7 @@ if (isset($_GET['p'])) {
         include('content/pages/public/home.php');
         echo "<script>document.title = 'Home';</script>";
     } else {
-        include('content/pages/public/404.php');
+        include('content/pages/404.php');
         echo "<script>document.title = 'PAGE NOT FOUND - 404';</script>";
     }
 } else {

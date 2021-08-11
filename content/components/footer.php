@@ -1,7 +1,7 @@
 </main>
 <!--FOOTER-->
 <footer>
-  <div class="container-fluid pb-0 mb-0 mt-5 justify-content-center text-light" style="background-color: rgb(255, 180, 68)">
+  <div class="container-fluid pb-0 mb-0 justify-content-center text-light" style="background-color: rgb(255, 180, 68)">
     <div class="row justify-content-center">
       <div class="col-11">
         <div class="row py-5">
@@ -16,9 +16,16 @@
           <div class="col-xl-2 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
             <h6 class="mb-3 mb-lg-4 bold-text mt-sm-0 mt-5"><b>menu</b></h6>
             <ul class="list-unstyled">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="about.html#parallax2">Source</a></li>
+              <li><a href="index.php?p=home">Home</a></li>
+              <li><a href=<?php
+                          if (isset($_SESSION['id'])) {
+                            echo "\"dashboard.php\">Dashboard";
+                          } else {
+                            echo "\"index.php?p=login\">Login";
+                          };
+                          ?> </a> </li>
+              <li><a href="index.php?p=about">About</a></li>
+              <li><a href="index.php?p=about#parallax2">Source</a></li>
               <li data-bs-toggle="modal" data-bs-target="#staticBackdrop"><a href="#">Contact</a></li>
             </ul>
           </div>

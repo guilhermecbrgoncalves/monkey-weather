@@ -1,72 +1,76 @@
+<?php
+$tomorrowDate1 = date("l", strtotime("+1 day"));
+$tomorrowDate2 = date("l", strtotime("+2 day"));
+$tomorrowDate3 = date("l", strtotime("+3 day"));
+$tomorrowDate4 = date("l", strtotime("+4 day"));
+?>
+
 <!--SERVICE-->
-<h1 class="text-muted mb-md-0 mb-5 bold-text text-center mt-4">the monkey weather</h1>
-<p class="text-center mt-3">The Monkey Weather will tell you where you are and the Weather for today, tomorrow and
-    for
-    the next day!</p>
-<div class="container text-center mt-4 mb-3">
-    <button class="btn" style="background-color: rgb(255, 180, 68); color: white;" type="submit" onclick="geo()">Search Weather</button>
-</div>
-<div class="container">
-    <div class="card bg-dark text-white mb-5">
-        <img class="card-img" id="image1" src="IMG/banana.jfif" style="max-height: 350px; object-fit: cover;" alt="Card image">
-        <div class="card-img-overlay overlay">
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-8 text-justify py-4 px-4" id="overlay1">
-                    <p class="card-title" id="tempMaxHoje"></p>
-                    <p class="card-title" id="tempMinHoje"></p>
-                    <p class="card-title" id="intVentoHoje"></p>
-                    <p class="card-title" id="directVentoHoje"></p>
-                    <p class="card-title" id="chuvaHoje"></p>
+<div class="container-fluid mt-0" id="bgLocal" style="background-size: cover; min-height: 100vh">
+    <h1 class="mb-md-0 mb-5 bold-text text-center">the monkey weather</h1>
+    <p class="text-center text-light mt-4">The Monkey Weather will tell you where you are and the Weather for today, tomorrow and
+        for
+        the next days!</p>
+
+    <div class="container mb-3 mt-5">
+        <div class="container-fluid overlayPlaces" style="min-height: 250px;">
+            <div class="row ps-3 my-auto">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-4 my-auto">
+                    <h1 class="text-light" id="local"></h1>
                 </div>
-                <div class="col text-center">
-                    <h1 id="local"></h1>
+                <div class="col-lg-6 col-md-6 col-sm-4 col-4 my-auto ">
+                    <img id="tempImgHoje" src="" alt="" style="width: 200px;">
                 </div>
             </div>
-        </div>
-        <div class="col text-center" style="background-color:rgb(255, 180, 68);">
-            <h3 id="today"></h3>
-        </div>
-    </div>
-</div>
-
-<div class="container mb-5">
-    <div class="row">
-        <div class="col col-lg-6 col-sm-12">
-            <div class="card card bg-dark text-white mb-5">
-                <img class="card-img-top" src="IMG/macaco.jfif" id="image2" style="width: 100%; max-height: 250px; object-fit: cover;" alt="Card image cap">
-                <div class="card-img-overlay">
-                    <div class="col-lg-6 col-md-8 col-sm-8 px-4 py-4" id="overlay2">
-                        <p class="card-title" id="tempMaxAmanha"></p>
-                        <p class="card-title" id="tempMinAmanha"></p>
-                        <p class="card-title" id="intVentoAmanha"></p>
-                        <p class="card-title" id="directVentoAmanha"></p>
-                        <p class="card-title" id="chuvaAmanha"></p>
+            <div class="row ">
+                <div class="col-lg-7 col-md-6 col-sm-12">
+                    <div class="container pb-3 pt-3">
+                        <h3><span id="tempMaxHoje"></span> <span class="text-muted ms-3" id="tempMinHoje"></span></h3>
+                        <hr>
+                        <h4 class="text-light" id="weatherType"></h4>
+                        <hr>
+                        <p id="intVentoHoje"></p>
+                        <hr>
+                        <p id="directVentoHoje"></p>
+                        <hr>
+                        <p id="chuvaHoje"></p>
+                        <hr>
                     </div>
                 </div>
-                <div class="col text-center" style="background-color:rgb(255, 180, 68);">
-                    <h3 id="tomorrow"></h3>
-                </div>
-            </div>
-        </div>
-
-        <div class="col col-lg-6 col-sm-12">
-            <div class="card card bg-dark text-white mb-5">
-                <img class="card-img-top" src="IMG/macaco2.jfif" id="image3" style="width: 100%; max-height: 250px; object-fit: cover;" alt="Card image cap">
-                <div class="card-img-overlay">
-                    <div class="col-lg-6 col-md-8 col-sm-8 px-4 py-4" id="overlay3">
-                        <p class="card-title" id="tempMaxDepois"></p>
-                        <p class="card-title" id="tempMinDepois"></p>
-                        <p class="card-title" id="intVentoDepois"></p>
-                        <p class="card-title" id="directVentoDepois"></p>
-                        <p class="card-title" id="chuvaDepois"></p>
+                <div class="col-lg-5 col-md-6 col-sm-12 col-12">
+                    <div class="container pb-3 pt-3">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-3 col-3">
+                                <p class="pt-4"><?= $tomorrowDate1; ?> </p>
+                                <p class="pt-4"><?= $tomorrowDate2 ?></p>
+                                <p class="pt-4"><?= $tomorrowDate3; ?></p>
+                                <p class="pt-4"><?= $tomorrowDate4; ?></p>
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-3">
+                                <img id="tempImgAmanha1" src="" alt="">
+                                <br>
+                                <img id="tempImgAmanha2" src="" alt="">
+                                <br>
+                                <img id="tempImgAmanha3" src="" alt="">
+                                <br>
+                                <img id="tempImgAmanha4" src="" alt="">
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-6">
+                                <p class="pt-4" id="tempMaxMinAmanha1"></p>
+                                <p class="pt-4" id="tempMaxMinAmanha2"></p>
+                                <p class="pt-4" id="tempMaxMinAmanha3"></p>
+                                <p class="pt-4" id="tempMaxMinAmanha4"></p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col text-center" style="background-color:rgb(255, 180, 68)">
-                    <h3 id="nextDay"></h3>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script src="js/main.js"></script>
+<script>
+    geo()
+</script>
 
 <!--SERVICE END-->

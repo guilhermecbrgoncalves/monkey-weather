@@ -42,14 +42,14 @@
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
             while ($row = $result->fetch_assoc()) {   ?>
-                <div class="container mb-3">
+                <div class="container mb-5">
                     <div class="container-fluid overlayPlaces" id="bgLocal_<?php echo $row['name']; ?>" style="min-height: 250px; background-size: cover;">
                         <div class="row overlayPlacesTp ps-3 my-auto">
                             <div class="col-lg-4 col-md-4 col-sm-4 col-4 my-auto">
                                 <h1 class="text-light" id="local_<?php echo $row['name']; ?>"></h1>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-4 col-4 my-auto ">
-                                <img id="tempImgHoje_<?php echo $row['name']; ?>" src="" alt="" style="width: 200px;">
+                                <img id="tempImgHoje_<?php echo $row['name']; ?>" src="" alt="" style="width: 150px;">
                             </div>
                             <div class="col-lg-2 col-md-2 col-sm-2 col-4 my-auto text-center">
                                 <form action="db/deleteLocal.php" method="POST">
@@ -75,6 +75,7 @@
                             </div>
                             <div class="col-lg-5 col-md-6 col-sm-12 col-12">
                                 <div class="container pb-3 pt-3">
+
                                     <div class="row">
                                         <div class="col-md-3 col-sm-3 col-3">
                                             <p class="pt-4"><?= $tomorrowDate1; ?> </p>
@@ -102,13 +103,12 @@
                             </div>
                         </div>
                     </div>
-                    <hr>
                 </div>
             <?php } ?>
         </div>
     </div>
     <!--PLACES END-->
-    <script src="js/yourWeather.js"></script>
+    <script src="js/main.js"></script>
     <script>
         var arr = [];
         let numRows = 0;
@@ -126,5 +126,6 @@
             numRows++
         <?php };
         ?>;
+        localSelect();
         weatherCards(arr, numRows);
     </script>

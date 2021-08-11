@@ -2,9 +2,9 @@
 if (isset($_GET['p'])) {
     $pag = $_GET['p'];
 
-    if ($pag == 'home') { 
-        include('content/pages/dashboard/home.php');
-        echo "<script>document.title = 'Home';</script>";
+    if ($pag == 'dashboard') { 
+        include('content/pages/dashboard/index.php');
+        echo "<script>document.title = 'Dashboard';</script>";
     }
     else if ($pag == 'my-places') { 
         include('content/pages/dashboard/my-places.php');
@@ -19,7 +19,7 @@ if (isset($_GET['p'])) {
         echo "<script>document.title = 'PAGE NOT FOUND - 404';</script>";
     }
 } else {
-    include('content/pages/dashboard/home.php'); 
-   echo "<script>document.title = 'Home';</script>";
+    include('content/pages/dashboard/index.php'); 
+   echo "<script>document.title = 'Dashboard';</script>";
 }
 ?>

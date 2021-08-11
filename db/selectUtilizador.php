@@ -8,23 +8,16 @@ $result = $conn->query($sql);
 if ($result->num_rows == 1) {
   $row = $result->fetch_assoc();
 ?>
-
-  <div class="container">
-
-    <?php
-    if (isset($_GET['response']) && $_GET['response'] == 'edited')
-      echo '<div class="alert alert-success" role="alert">
-User data updated!
-</div>';
-    else if (isset($_GET['response']) && $_GET['response'] == 'error')
-      echo '<div class="alert alert-danger" role="alert">
-Error, please try again later.
-</div>';
-    ?>
-
+  <div class="container mt-5 pt-5 mb-5 pb-5">
     <div class="row">
-      <div class="col-6">
-        <form method="POST" enctype="multipart/form-data" class="me-5">
+      <div class="col-xl-6 col-lg-6 col-md--6 col-sm-12 col-12 mt-5">
+        <?php
+        if (isset($_GET['response']) && $_GET['response'] == 'edited')
+          echo '<div class="alert alert-success" role="alert">User data updated!</div>';
+        else if (isset($_GET['response']) && $_GET['response'] == 'error')
+          echo '<div class="alert alert-danger" role="alert">Error, please try again later.</div>';
+        ?>
+        <form method="POST" enctype="multipart/form-data">
           <input type="text" class="form-control" name="update-id" required id="update-id" value="<?= $row['id'] ?>" hidden>
 
           <div class="form-group mb-3">
@@ -54,7 +47,7 @@ Error, please try again later.
         </form>
       </div>
 
-      <div class="col-6">
+      <div class="col-xl-6 col-lg-6 col-md--6 col-sm-12 col-12 mt-5 text-center">
         <img class="img-profile rounded-circle ms-5" style="width: 350px; height:350px; object-fit:cover;" src="img/profile-img/<?php echo $image ?>">
       </div>
     </div>
@@ -78,7 +71,6 @@ Error, please try again later.
       </div>
     </div>
   </div>
-
 
 <?php
 } else {

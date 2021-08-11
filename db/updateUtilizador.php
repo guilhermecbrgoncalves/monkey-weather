@@ -31,9 +31,6 @@ if (!$_FILES["fileToUpload"]["name"] == "") {
   }
 }
 
-//die();
-
-
 $id = $_SESSION['id'];
 $user = $_POST['update-username'];
 $pwd = $_POST['update-password'];
@@ -47,9 +44,9 @@ if ($uploadOk == 1) {
 }
 
 if ($conn->query($sql) === TRUE) {
-  header('refresh: 2; url= ../index.php?p=profile&response=edited');
+  header('refresh: 2; url= ../dashboard.php?p=profile&response=edited');
 } else {
-  header('refresh: 2; url= ../index.php?p=profile&response=error');
+  header('refresh: 2; url= ../dashboard.php?p=profile&response=error');
 }
 
 $conn->close();
