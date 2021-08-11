@@ -3,6 +3,14 @@
         <div class="col" style="background-image: url('img/macaco8.jfif'); height: 100vh;  background-size: cover; background-repeat: no-repeat">
         </div>
         <div class="col my-auto h-100 p-5">
+            <?php
+            if (isset($_GET['e']) && $_GET['e'] == 'success')
+                echo '<div class="alert alert-success" role="alert">User Account created succesfully! Please Login.</div>';
+            else if (isset($_GET['e']) && $_GET['e'] == 'error')
+                echo '<div class="alert alert-danger" role="alert">Error creating User Account, please try again later.</div>';
+            else if (isset($_GET['e']) && $_GET['e'] == 'errorLogin')
+                echo '<div class="alert alert-danger" role="alert">Invalid Login.</div>';
+            ?>
             <form action="db/autenticarUtilizador.php" id="login" method="POST">
                 <div class="form-group mb-3">
                     <label for="login-username" class="form-label">Username</label>

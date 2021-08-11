@@ -8,12 +8,13 @@ if (!isset($_SESSION['id'])) {
     $image = $_SESSION['image'];
 }
 ?>
+
 <body>
     <header>
         <!--NAVBAR-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top mb-5" style="background-color:blanchedalmond;">
             <div class="container-fluid">
-                <a class="navbar-brand mb-md-0 mb-5 bold-text" href="index.php?p=home">the monkey weather</a>
+                <a class="navbar-brand mb-md-0 mb-5 bold-text" href="index.php">the monkey weather</a>
                 <div>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -30,7 +31,7 @@ if (!isset($_SESSION['id'])) {
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <?= $name ?>
                             </a>
-                            <ul class="dropdown-menu ms-5" style="background-color: rgb(255, 180, 68); color: white;" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <ul class="dropdown-menu me-5" style="background-color: rgb(255, 180, 68); color: white;" aria-labelledby="navbarDarkDropdownMenuLink">
                                 <li><a class="dropdown-item navDropdown" href="dashboard.php?p=profile">my profile</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
@@ -42,7 +43,6 @@ if (!isset($_SESSION['id'])) {
                 </div>
             </div>
         </nav>
-
         <!--NAVBAR END-->
     </header>
     <main>

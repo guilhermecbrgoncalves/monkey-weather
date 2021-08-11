@@ -2,7 +2,7 @@
 include('db.php');
 
 $user = $_POST['register-username'];
-$pwd = $_POST['register-password'];
+$pwd = $_POST['register-password1'];
 $email = $_POST['register-email'];
 $name = $_POST['register-name'];
 
@@ -10,10 +10,9 @@ $sql = "INSERT INTO utilizador (username, password, email, name)
 VALUES ('$user', '$pwd', '$email', '$name')";
 
 if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
-  header('refresh: 2; url= ../index.php?p=login');
+  header('refresh: 2; url= ../index.php?p=login&e=success');
 } else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
+  header('refresh: 2; url= ../index.php?p=login&e=error');
 }
 
 

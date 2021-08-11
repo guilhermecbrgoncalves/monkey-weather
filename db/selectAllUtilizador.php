@@ -35,9 +35,7 @@ if ($result->num_rows > 0) {
           <div class="col p-2"><?= $row['email'] ?></div>
         </div>
       </form>
-
   <?php
-
     }
   } else {
     echo "0 results";

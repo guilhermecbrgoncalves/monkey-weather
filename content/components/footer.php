@@ -16,17 +16,17 @@
           <div class="col-xl-2 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
             <h6 class="mb-3 mb-lg-4 bold-text mt-sm-0 mt-5"><b>menu</b></h6>
             <ul class="list-unstyled">
-              <li><a href="index.php?p=home">Home</a></li>
+              <li><a href="index.php">home</a></li>
               <li><a href=<?php
                           if (isset($_SESSION['id'])) {
-                            echo "\"dashboard.php\">Dashboard";
+                            echo "\"dashboard.php\">dashboard";
                           } else {
-                            echo "\"index.php?p=login\">Login";
+                            echo "\"index.php?p=login\">login";
                           };
                           ?> </a> </li>
-              <li><a href="index.php?p=about">About</a></li>
-              <li><a href="index.php?p=about#parallax2">Source</a></li>
-              <li data-bs-toggle="modal" data-bs-target="#staticBackdrop"><a href="#">Contact</a></li>
+              <li><a href="index.php?p=about">about</a></li>
+              <li><a href="index.php?p=about#parallax2">source</a></li>
+              <li data-bs-toggle="modal" data-bs-target="#staticBackdrop"><a href="#">contact</a></li>
             </ul>
           </div>
           <div class="col-xl-2 col-md-4 col-sm-4 col-12">
@@ -53,24 +53,24 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form class="py-4 px-5">
+          <form class="py-4 px-5" method="post" action="php/email.php">
             <div class="mb-3">
               <label for="form-name" class="form-label">Name</label>
-              <input type="text" class="form-control" id="form-name" placeholder="Who is you?" required>
+              <input type="text" class="form-control" id="form-name" name="form-name" placeholder="Who is you?" required>
             </div>
             <div class="mb-3">
               <label for="form-email" class="form-label">Email address</label>
-              <input type="email" class="form-control" required id="form-email" placeholder="Insert an e-mail">
+              <input type="email" class="form-control" name="form-email" required id="form-email" placeholder="Insert an e-mail">
               <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
               </div>
             </div>
             <div class="mb-3">
               <label for="form-subject" class="form-label">Subject</label>
-              <input type="text" class="form-control" id="form-subject" placeholder="What's up?">
+              <input type="text" class="form-control" id="form-subject" name="form-subject" placeholder="What's up?">
             </div>
             <div class="mb-3">
               <label for="text-area">Message</label>
-              <textarea class="form-control" id="text-area" rows="3" placeholder="Your Message" required></textarea>
+              <textarea class="form-control" id="text-area" name="form-message" rows="3" placeholder="Your Message" required></textarea>
             </div>
         </div>
         <div class="modal-footer">

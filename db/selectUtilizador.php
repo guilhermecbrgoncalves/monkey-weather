@@ -16,10 +16,11 @@ if ($result->num_rows == 1) {
           echo '<div class="alert alert-success" role="alert">User data updated!</div>';
         else if (isset($_GET['response']) && $_GET['response'] == 'error')
           echo '<div class="alert alert-danger" role="alert">Error, please try again later.</div>';
+        else if (isset($_GET['e']) && $_GET['e'] == 'errorDeleting')
+          echo '<div class="alert alert-danger" role="alert">Error deleting User Account, please try again later.</div>';
         ?>
         <form method="POST" enctype="multipart/form-data">
           <input type="text" class="form-control" name="update-id" required id="update-id" value="<?= $row['id'] ?>" hidden>
-
           <div class="form-group mb-3">
             <label for="update-username">Username</label>
             <input type="text" class="form-control" name="update-username" required id="update-username" value="<?= $row['username'] ?>">
@@ -66,12 +67,14 @@ if ($result->num_rows == 1) {
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="submit" formaction="db/deleteUtilizador.php" class="btn btn-danger">Delete My Account</button>
+          <form method="POST" action="db/deleteUtilizador.php">
+          <input type="text" class="form-control" name="form-id" required id="update-id" value="<?= $id ?>" hidden>
+            <button type="submit" class="btn btn-danger">Delete My Account</button>
+          </form>
         </div>
       </div>
     </div>
   </div>
-
 <?php
 } else {
   echo "0 results";

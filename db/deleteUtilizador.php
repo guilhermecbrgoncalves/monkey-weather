@@ -4,15 +4,12 @@ include('db.php');
 $id = $_POST['form-id'];
 
 // sql to delete a record
-$sql = "DELETE FROM utilizador WHERE id=$id";
+$sql = "DELETE FROM utilizador WHERE id_utilizador=$id";
 
 if ($conn->query($sql) === TRUE) {
-  echo "Record deleted successfully";
-  header('refresh: 2; url= ../index.php?p=dashboard');
+  header('refresh: 2; url= ../index.php?p=home&e=userDeleted');
 } else {
-  echo "Error deleting record: " . $conn->error;
-  header('refresh: 2; url= ../index.php?p=dashboard');
+  header('refresh: 2; url= ../dashboard.php?p=profile&e=errorDeleting');
 }
-
 $conn->close();
 ?>

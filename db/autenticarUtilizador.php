@@ -17,12 +17,11 @@ if ($result->num_rows == 1) {
   $_SESSION['user'] = $row['username'];
   $_SESSION['name'] = $row['name'];
   $_SESSION['image'] = $row['image'];
-  //die($_SESSION['image']);
 
-  header('Location: ../dashboard.php?p=home');
+  header('Location: ../dashboard.php');
 
 } else {
-  echo "Login inválido: " . $sql . "<br>" . $conn->error;
+  header('Location: ../index.php?p=login&e=errorLogin');
 }
 $conn->close();
 ?>
