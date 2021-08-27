@@ -38,7 +38,7 @@ if (!isset($_SESSION['id'])) {
                                 </li>
                                 <li>
                                     <form action="db/logout.php">
-                                    <button class="dropdown-item navDropdown" type="submit" data-bs-toggle="modal" data-bs-target="#logoutModal">logout</button>
+                                        <button class="dropdown-item navDropdown" type="submit" data-bs-toggle="modal" data-bs-target="#logoutModal">logout</button>
                                     </form>
                                 </li>
                             </ul>

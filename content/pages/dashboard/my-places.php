@@ -7,7 +7,7 @@
                 <form action="db/localStore.php" method="POST">
                     <input type="text" class="form-control" name="id" required id="id" value="<?= $userId ?>" hidden>
                     <div class="form-group text-center" style="width: 100%;">
-                        <label for="form-local" style="color: white;">Area Select</label>
+                        <label for="form-local" class="pt-2" style="color: white;">Area Select</label>
                         <select multiple class="form-control" id="selectLocal" name="form-local" style="height: 200px;">
                         </select>
                     </div>
@@ -21,7 +21,7 @@
                 } else if (isset($_GET['response']) && $_GET['response'] == 'duplicate') {
                     echo '<div class="alert alert-danger" role="alert"> Error, Place already exists on your list. </div>';
                 } else if (isset($_GET['response']) && $_GET['response'] == 'deleted') {
-                    echo '<div class="alert alert-danger" role="alert"> Place deleted successfully! </div>';
+                    echo '<div class="alert alert-success" role="alert"> Place deleted successfully! </div>';
                 } else if (isset($_GET['response']) && $_GET['response'] == 'errorDelete') {
                     echo '<div class="alert alert-danger" role="alert"> Error in deleting Place, please try again later.</div>';
                 }
@@ -45,10 +45,10 @@
                 <div class="container mb-5">
                     <div class="container-fluid overlayPlaces" id="bgLocal_<?php echo $row['name']; ?>" style="min-height: 250px; background-size: cover;">
                         <div class="row overlayPlacesTp ps-3 my-auto">
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-4 my-auto">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-6 my-auto">
                                 <h1 class="text-light" id="local_<?php echo $row['name']; ?>"></h1>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-4 col-4 my-auto ">
+                            <div class="col-lg-6 col-md-6 col-sm-4 col-2 my-auto ">
                                 <img id="tempImgHoje_<?php echo $row['name']; ?>" src="" alt="" style="width: 150px;">
                             </div>
                             <div class="col-lg-2 col-md-2 col-sm-2 col-4 my-auto text-center">
