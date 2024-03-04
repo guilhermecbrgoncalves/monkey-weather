@@ -10,8 +10,6 @@ CREATE TABLE utilizador(
     image VARCHAR(255)
 );
 
-INSERT INTO utilizador (username, password, email, name) VALUES ('guilhas2', '12345', 'guigonca2@gmail.com', 'Guilherme Gonçalves');
-
 CREATE TABLE locals(
     name VARCHAR(255) PRIMARY KEY,
     id_utilizador INT,
