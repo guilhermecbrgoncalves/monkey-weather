@@ -249,7 +249,6 @@ function whatWind(windId) {
 //RANDOM DE IMAGENS
 function randomImg(local, bgImg) {
     let rnd = (Math.random() * (3 - 1) + 1).toFixed(0);
-    console.log("rnd is: " + rnd);
     if (rnd == 1) {
         bgImg.style.backgroundImage = "url('img/locais/" + local + "1.jpg')";
     } else if (rnd == 2) {
@@ -330,10 +329,7 @@ function weatherCards(arr, numRows) {
         xmlhttp.send();
 
         for (var j = 0; j < data["data"].length; j++) {
-            console.log('id localidade: ' + arr[i]);
-
             if (data["data"][j]["globalIdLocal"] == arr[i]) {
-                console.log(data["data"][j]["local"])
                 //ADICIONA NOME DE LOCAL
                 document.getElementById("local_" + arr[i]).textContent = data["data"][j]["local"];
                 local = data["data"][j]["local"];
@@ -362,8 +358,6 @@ function showPosition(position) {
     myLat = position.coords.latitude;
     myLon = position.coords.longitude;
 
-    console.log(myLat)
-
     var lat_1 = 0;
     var lon_1 = 0;
 
@@ -372,11 +366,7 @@ function showPosition(position) {
         lat_1 = parseFloat(temp["latitude"]).toFixed(1);
         lon_1 = parseFloat(temp["longitude"]).toFixed(0);
 
-        console.log(lat_1)
-        console.log(myLat)
-
         if (parseFloat(myLat).toFixed(1) == lat_1 && parseFloat(myLon).toFixed(0) == lon_1) {
-            console.log(data["data"][i]["globalIdLocal"])
             idLocal = data["data"][i]["globalIdLocal"]
             local = data["data"][i]["local"]
         } else {
